@@ -1,0 +1,126 @@
+body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+} 
+
+#add-task-container{
+    width: 300px;
+    padding: 20px 10px;
+    background-color: white;
+    border: 20px;
+    box-shadow: 0 0 3px;
+    display: flex;
+    margin-bottom: 20px;
+    position: fixed;
+    bottom: 10px;
+    left: 10%;
+    margin: auto;
+}
+
+input{
+    flex: 5;
+    margin-right: 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+
+#add-task{
+    transition: .3s;
+    font-size: 1.2rem;
+    padding: 5px;
+    flex: 1;
+    background-color: #fff;
+    color: green;
+    border: green solid 2px;
+    border-radius: 10px;
+}
+
+
+/* styling task from js */
+
+.task{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 3px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.task li{
+    list-style: none;
+    flex: 4;
+    padding: 5px;
+    font-size: 1.3rem;
+    margin: 10px;
+}
+
+.task button{
+    flex: 1;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.task .checkTask{
+    color: orange;
+    margin-right: 5px;
+    border: 2px solid orange;
+    font-size: 1.5rem;
+    transition: .5s;
+}
+
+
+.task .checkTask:hover{
+    color: white;
+    background-color: orange;
+}
+
+
+.task .deleteTask{
+    color: red;
+    margin-right: 5px;
+    border: 2px solid red;
+    font-size: 1.5rem;
+    transition: .5s;
+}
+
+.task .deleteTask:hover{
+    background-color: red;
+    color: white;
+}
+
+
+/* #384ca4 primary
+ */
+
+
+ /* #031955 */
+
+
+@media screen and (min-width: 768px) {
+     
+    #add-task-container{
+        width: 350px;
+        left: 28%;
+
+    }
+
+}
+
+
+@media screen and (min-width: 1024px) {
+     
+    #add-task-container{
+        width: 380px;
+        left: 50%;
+    }
+
+}
