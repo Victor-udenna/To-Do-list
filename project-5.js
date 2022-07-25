@@ -13,14 +13,14 @@ addTask.addEventListener('click', function () {
     task.appendChild(li)
 
     let checkbutton = document.createElement('button');
-    checkbutton.innerHTML='Check'; 
+    checkbutton.innerHTML = '<img src="./images/check-lg.svg" alt="">'; 
     checkbutton.classList.add('checkTask');
-    li.appendChild(checkbutton);
+    task.appendChild(checkbutton);
     
     let deletebutton = document.createElement('button');
-    deletebutton.innerHTML= 'Delete';
+    deletebutton.innerHTML= ' <img src="./images/trash3-fill.svg" alt="">';
     deletebutton.classList.add('deleteTask');
-    li.appendChild(deletebutton);
+    task.appendChild(deletebutton);
 
     if (inputTask.value === '') {
         alert('Please Enter Task');
@@ -33,11 +33,14 @@ addTask.addEventListener('click', function () {
     checkbutton.addEventListener('click', function (e) {
         e.preventDefault()
         checkbutton.parentElement.style.textDecoration = "line-through";
+        checkbutton.style.background = 'rgb(10, 70, 117)';
+        deletebutton.style.background = 'rgb(10, 70, 117)';
     });
 
     deletebutton.addEventListener('click', function (e) {
-        let target = e.target;
-        target.parentElement.parentElement.remove();
+        // let target = e.target;
+        e.preventDefault()
+        deletebutton.parentElement.remove();
         // window.location.reload();
     })
 
